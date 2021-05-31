@@ -11,6 +11,7 @@ public class ListGroupByExample {
 
     public static void main(String[] args) {
         getCountsForEachName();
+        findDuplicateByFrequency();
     }
 
     public static void getCountsForEachName() {
@@ -23,14 +24,16 @@ public class ListGroupByExample {
                                         Collectors.counting()
                                 )
                         );
-        System.out.println(result);
+        System.out.println("getCountsForEachName -> " + result);
+        System.out.println("===============================");
     }
 
-    public static <T> Set<T> findDuplicateByFrequency(List<T> list) {
-
-        return list.stream()
-                .filter(i -> Collections.frequency(list, i) > 1)
+    public static void findDuplicateByFrequency() {
+        /*Find elements which are duplicates more than 1*/
+        Set result = namesList.stream()
+                .filter(i -> Collections.frequency(namesList, i) > 1)
                 .collect(Collectors.toSet());
+        System.out.println("findDuplicateByFrequency-> " + result);
 
     }
 }

@@ -4,3 +4,4 @@
 out/
 ../out/
 .idea/$PRODUCT_WORKSPACE_FILE$
+.idea
