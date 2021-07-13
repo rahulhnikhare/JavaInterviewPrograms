@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class Dummy1 {
+public class CountThenNumberOfCharacterInString {
     public static void main(String[] args) {
         System.out.println(test().toString());
         TreeMap<Character, Integer> map = test();

@@ -43,7 +43,7 @@ public class RemoveDuplicate {
 
         System.out.println(" ======================================================================= ");
 
-        /*Remove Dupicate Number*/
+        /*Remove Duplicate Number*/
         Integer[] arr = new Integer[]{100, 24, 13, 44, 114, 200, 40, 112, 100};
 
         List<Integer> integerList =

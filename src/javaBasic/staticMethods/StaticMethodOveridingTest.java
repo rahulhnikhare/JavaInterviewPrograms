@@ -6,7 +6,7 @@ public class StaticMethodOveridingTest {
 		Parent parent = new Child();
 		//Child child = (Child) new Parent();
 		
-		parent.diplay();
+		parent.diplay(); // Parent.display is static method
 		parent.instanceMethod();
 	}
 

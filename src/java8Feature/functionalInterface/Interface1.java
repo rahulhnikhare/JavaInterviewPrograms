@@ -11,7 +11,7 @@ public interface Interface1 {
 		 
 	 }
 
-	 public default void defaultMethod() {
+	 default void defaultMethod() {
 		 Interface1.statMethod();
 		 System.out.println("defaultMethod Method of Interface1");
 	 }

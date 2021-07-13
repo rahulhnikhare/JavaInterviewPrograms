@@ -43,11 +43,11 @@ public class EmployeeTest {
         System.out.println(employeeDepartment.size());
     }
 
-    //@Test
+    @Test
     public void sort_by_employee_number() {
-        Comparator<Employee> byFirstName = (e1, e2) -> e1.getEmployeeFirstName().compareTo(e2.getEmployeeFirstName());
+        Comparator<Employee> byFirstName = Comparator.comparing(Employee::getEmployeeFirstName);
 
-        Comparator<Employee> byEmployeeNumber = (e1, e2) -> e1.getEmployeeNumber().compareTo(e2.getEmployeeNumber());
+        Comparator<Employee> byEmployeeNumber = Comparator.comparing(Employee::getEmployeeNumber);
 
         employees.stream().sorted(byFirstName.thenComparing(byEmployeeNumber))
                 .forEach(e -> System.out.println(e.toString()));

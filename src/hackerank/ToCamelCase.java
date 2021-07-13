@@ -8,7 +8,7 @@ import javax.xml.bind.Marshaller;
 import java.io.FileOutputStream;
 import java.io.StringWriter;
 
-public class Dummy {
+public class ToCamelCase {
     static String toCamelCase(String s){
         String[] parts = s.split(" ");
         String camelCaseString = "";
