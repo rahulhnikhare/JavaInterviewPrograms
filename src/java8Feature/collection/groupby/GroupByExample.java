@@ -37,12 +37,13 @@ public class GroupByExample {
                         Collectors.groupingBy(Student::getTeacher));
 
         System.out.println(groupByTeachers);
-        assertEquals(1, groupByTeachers.get("White").size());
+        //assertEquals(1, groupByTeachers.get("White").size());
         String s1 ="HelloW";
         String s2 ="Hello";
         s2= s1+"W";
-        System.out.println("s2==s1 = " + s2==s1);
-        
+        System.out.println(" DoubleEQual " + s2==s1); // False . Address differenet
+       // System.out.println("s2==s1 EqualsMethod " + s2.equals(s1)); // False .StringPool
+
     }
 
     @Test
