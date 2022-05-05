@@ -1,6 +1,6 @@
 package hackerank;
 
-class Main
+class StringReplaceAll
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
@@ -9,4 +9,6 @@ class Main
 		System.out.println(s);
 
 	}
+
+
 }
