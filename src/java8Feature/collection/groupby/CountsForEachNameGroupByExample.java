@@ -32,9 +32,13 @@ public class CountsForEachNameGroupByExample {
 
     public static void findDuplicateByFrequency() {
         /*Find elements which are duplicates more than 1*/
-        Set result = namesList.stream()
-                //.filter(i -> Collections.frequency(namesList, i) > 1)
-                .collect(Collectors.toSet());
+        /*Set result = namesList.stream()
+                .filter(i -> Collections.frequency(namesList, i) > 1)
+                .collect(Collectors.toSet());*/
+
+        HashSet<String> hs=new HashSet<>();
+
+        Set result=namesList.stream().filter(a->!hs.add(a)).collect(Collectors.toSet());
         System.out.println("findDuplicateByFrequency-> " + result);
 
     }
