@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class GFG {
+class CheckPair {
 
     // Function to find and print pair
     static boolean chkPair(int A[], int size, int x) {
@@ -24,8 +24,8 @@ class GFG {
         List result = new ArrayList<>();
         int Arr[] = {1, 3, 5, 6, 4};
 
-        //int A[] = {0, -1, 2, -3, 1};
-        int A[] = {1, 3, 5, 6, 4};
+        int A[] = {0, -1, 2, -3, 1};
+        //int A[] = {1, 3, 5, 6, 4};
         int x = -2;
         int size = A.length;
 

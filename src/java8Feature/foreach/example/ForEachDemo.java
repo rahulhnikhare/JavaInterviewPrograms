@@ -2,6 +2,7 @@ package java8Feature.foreach.example;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class ForEachDemo {
 	public static void main(String[] args) {
@@ -23,9 +24,11 @@ public class ForEachDemo {
 		}*/
 		
 	// In Java 8, you can loop a Map with forEach + lambda expression
-		
-		
-		
+
+		items.forEach((k,v)-> System.out.println(k +"-"+v));
+
+		System.out.println(items.keySet().stream().collect(Collectors.toList()));
+
 	}
 
 }

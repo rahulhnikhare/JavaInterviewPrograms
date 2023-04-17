@@ -1,8 +1,6 @@
 package hackerank;
 
-import java.util.*;
- 
-public class GfG {
+public class DigitSum {
      
     static int digSum(int n)
     {

@@ -27,5 +27,12 @@ public class ListToMapVs {
         mapData.forEach((K,V)->{                 // mapofmaps entries
                 System.out.println(K+" "+ V.toString());       // print key and value of inner Hashmap
             });
+
+        // Map to List
+      List<Employee> employeesListfromMap =
+              mapData.values() // values method is important for Value.Similarly, use keyset for keys
+                      .stream()
+              .collect(Collectors.toList());
+        System.out.println("employeesListfromMap ->"+employeesListfromMap);
     }
 }

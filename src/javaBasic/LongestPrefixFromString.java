@@ -16,13 +16,14 @@ public class LongestPrefixFromString {
         int inputLength = inputStr.length;
         // Sorting will help to arrange on basis of Charater
         Arrays.sort(inputStr);
-        //Get first String in character Array
+        //Get first STRING in character Array
         char[] first = inputStr[0].toCharArray();
-        //Get Last String in character Array
+        //Get Last STRING in character Array
         char[] last = inputStr[inputStr.length - 1].toCharArray();
         //Start Comparing
         for (int i = 0; i < first.length; i++) {
             if (first[i] != last[i]) break;
+
             stringBuilder.append(first[i]);
         }
         return stringBuilder.toString();

@@ -1,14 +1,12 @@
 package java8Feature.collection.sort.onField;
 
-import java.time.LocalDate;
-import java.time.Month;
-import java.util.*;
-
 import org.junit.Before;
 import org.junit.Test;
 
-import static java.util.Comparator.comparingInt;
-import static java.util.stream.Collectors.*;
+import java.time.LocalDate;
+import java.time.Month;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class EmployeeTest {
 
@@ -107,9 +105,12 @@ public class EmployeeTest {
                 employeeDepartment
                         .stream()
                         .collect(
-                                groupingBy(
+                                Collectors.groupingBy(
                                         e -> e.department,
-                                        collectingAndThen(maxBy(comparingInt(e -> e.salary)), Optional::get)
+                                        Collectors.collectingAndThen(
+                                                Collectors.maxBy(Comparator.comparingInt(e -> e.salary)),
+                                                Optional::get
+                                        )
                                 )
                         );
         System.out.println(topEmployees);

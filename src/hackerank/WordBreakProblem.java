@@ -54,8 +54,11 @@ public class WordBreakProblem
 			// suffix are present the word is found in dictionary.
 
 			if (dictionary.contains(word.substring(0,i)) &&
-					wordBreak(word.substring(i,size)))
-			return true;
+					wordBreak(word.substring(i,size))){
+				System.out.println(":: "+word);
+				return true;
+			}
+
 		}
 		
 		// if all cases failed then return false

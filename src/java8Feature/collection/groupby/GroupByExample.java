@@ -3,12 +3,12 @@ package java8Feature.collection.groupby;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.*;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-
-import static org.junit.Assert.*;
 
 public class GroupByExample {
 
@@ -41,8 +41,8 @@ public class GroupByExample {
         String s1 ="HelloW";
         String s2 ="Hello";
         s2= s1+"W";
-        System.out.println(" DoubleEQual " + s2==s1); // False . Address differenet
-       // System.out.println("s2==s1 EqualsMethod " + s2.equals(s1)); // False .StringPool
+        //System.out.println(" DoubleEQual " + s2==s1); // False . Address differenet
+        System.out.println("s2==s1 EqualsMethod " + s2.equals(s1)); // False .StringPool
 
     }
 
@@ -60,6 +60,7 @@ public class GroupByExample {
                 );
 
         System.out.println("map: " + cards2Length);
+        System.out.println("List: " + cards2Length.entrySet().stream().collect(Collectors.toList()));
         /*
          * OUTPUT map: {16=[American Express], 4=[Lisa, Visa], 10=[MasterCard]}
          * */
